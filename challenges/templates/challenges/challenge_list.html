@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Challenge Tracker</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script src="{% static 'js/scripts.js' %}"></script>
+    
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Coding Challenge Tracker</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#challenges">Challenges</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home">
+            <h2>Track Your Progress</h2>
+            <p>Join us in tracking your coding challenges and improving your skills!</p>
+            <button id="startBtn">Get Started</button>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We aim to help coders improve through practice and community support.</p>
+        </section>
+
+        <section id="challenges">
+            <h2>Upcoming Challenges</h2>
+            <ul id="challengeList">
+                <!-- Challenges will be added here dynamically -->
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions, feel free to <a href="mailto:ernestolealislazamora@gmail.com">contact me!</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Coding Challenge Tracker. All Rights Reserved.</p>
+    </footer>
+
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>
