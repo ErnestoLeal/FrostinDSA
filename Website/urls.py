@@ -38,11 +38,12 @@ urlpatterns = [
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import RedirectView  # Importing RedirectView for redirection
-from challenges.views import homepage  # Importing the homepage view
+from challenges import views  # Importing the homepage view
 
 urlpatterns = [
-    path('', RedirectView.as_view(url='/challenges/', permanent=False)),  # Redirect root to challenges
+    #path('', RedirectView.as_view(url='', permanent=False)),  # Redirect root to challenges
     path('admin/', admin.site.urls),  # Admin URL
+    path('', views.home, name='home'),  # Set the homepage at the root URL
     path('challenges/', include('challenges.urls')),  # Include challenges app URLs
 ]
 

@@ -7,26 +7,48 @@
     <title>Coding Challenge Tracker</title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <script src="{% static 'js/scripts.js' %}"></script>
-    
 </head>
 <body>
     <header>
-        <h1>Welcome to the Coding Challenge Tracker</h1>
+        <h1>Coding Challenge Tracker</h1>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#challenges">Challenges</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="{% url 'homepage' %}">Home</a></li>
+                <li><a href="{% url 'progress_tracking' %}">Progress Tracking</a></li>
+                <li><a href="{% url 'challenge_list' %}">Challenges</a></li>
             </ul>
         </nav>
     </header>
     
     <main>
-        <section id="home">
-            <h2>Track Your Progress</h2>
-            <p>Join us in tracking your coding challenges and improving your skills!</p>
-            <button id="startBtn">Get Started</button>
+        <section class="hero">
+            <div class="hero-content">
+                <h2 class="hero-title">Improve Your Coding Skills</h2>
+                <p class="hero-tagline">Join our community and take on exciting challenges!</p>
+                <a href="#challenges" class="hero-button">Start Now</a>
+            </div>
+        </section>
+
+        <section class="challenges" id="challenges">
+            <h2>Available Challenges</h2>
+            <div class="challenge-container">
+                <div class="challenge-card">
+                    <h3>Challenge Title 1</h3>
+                    <p>Short description of challenge 1.</p>
+                    <a href="{% url 'submit_attempt' %}" class="feature-button">Solve Challenge</a>
+                </div>
+                <div class="challenge-card">
+                    <h3>Challenge Title 2</h3>
+                    <p>Short description of challenge 2.</p>
+                    <a href="{% url 'submit_attempt' %}" class="feature-button">Solve Challenge</a>
+                </div>
+                <div class="challenge-card">
+                    <h3>Challenge Title 3</h3>
+                    <p>Short description of challenge 3.</p>
+                    <a href="{% url 'submit_attempt' %}" class="feature-button">Solve Challenge</a>
+                </div>
+                <!-- Add more challenges as needed -->
+            </div>
         </section>
 
         <section id="about">

@@ -1,11 +1,17 @@
+/* Base styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
     background-color: #f4f4f4;
 }
 
+/* Header */
 header {
     background: #35424a;
     color: #ffffff;
@@ -13,41 +19,104 @@ header {
     text-align: center;
 }
 
-header nav ul {
-    list-style: none;
-    padding: 0;
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #fff;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #eceff1 0%, #ffffff 100%);
 }
 
-header nav ul li {
-    display: inline;
-    margin: 0 15px;
+.hero-content {
+    max-width: 800px;
 }
 
-header nav ul li a {
-    color: #ffffff;
+.hero-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.hero-tagline {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.hero-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
     text-decoration: none;
 }
 
-h1, h2 {
-    margin: 0;
+.hero-button:hover {
+    background-color: #0056b3;
 }
 
-main {
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    background-color: #fff;
+}
+
+/* Individual Feature */
+.feature {
+    text-align: center;
+    max-width: 300px;
     padding: 20px;
 }
 
-button {
+.feature-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Space above the button */
+}
+
+.feature-button:hover {
+    background-color: #0056b3;
+}
+
+/* Call to Action */
+.cta {
+    text-align: center;
+    padding: 40px;
     background: #35424a;
     color: #ffffff;
-    border: none;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #28a745;
+    color: #fff;
     padding: 10px 20px;
-    cursor: pointer;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background: #434d57;
+.cta-button:hover {
+    background-color: #218838;
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 10px 0;

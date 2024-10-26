@@ -38,8 +38,8 @@ from .models import Challenge
 
 
 
-def homepage(request):
-    return render(request, 'challenges/homepage.html')  # Ensure you create this template
+def home(request):
+    return render(request, 'challenges/home.html')  # Ensure you create this template
 
 def challenge_list(request):
     challenges = Challenge.objects.all()  # Fetch all challenges from the database
@@ -61,3 +61,8 @@ def submit_attempt(request):
         form = ChallengeAttemptForm()  # Create a new form instance for GET requests
 
     return render(request, 'challenges/submit_attempt.html', {'form': form})  # Render the submission template with the form
+def progress_tracking(request):
+    
+    context = {}
+    
+    return render(request, 'challenges/progress_tracking.html', context)
