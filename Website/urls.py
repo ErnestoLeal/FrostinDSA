@@ -45,6 +45,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),  # Admin URL
     path('', views.home, name='home'),  # Set the homepage at the root URL
     path('challenges/', include('challenges.urls')),  # Include challenges app URLs
+    path('code_executor/', include('code_executor.urls')),
 ]
 
 
