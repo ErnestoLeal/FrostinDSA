@@ -131,9 +131,17 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+#STATICFILES_DIRS = [
+ #   BASE_DIR / "static",
+  #  os.path.join(BASE_DIR, "code_executor/static/"),
+   # os.path.join(BASE_DIR, "challenges/static/"),
+
+#]
+
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
-    os.path.join(BASE_DIR, "challenges/static"),
+    BASE_DIR / "static",                # For general static files, if any
+    BASE_DIR / "code_executor/static",  # For React app's static files
+    BASE_DIR / "challenges/static",     # For challenge app's static files
 ]
 
 # Default primary key field type
@@ -141,6 +149,12 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOWED_ORIGINS = [
+"""CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # React app URL
-]
+]"""
+
+CORS_ALLOW_ALL_ORIGINS = True  # For testing; switch to specific origins for production
+CORS_ALLOW_CREDENTIALS = True  # If you need credentials
+#CORS_ALLOW_HEADERS = list(default_headers) + [
+ #   'content-type',
+#]

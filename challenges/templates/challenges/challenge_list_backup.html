@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding Challenge Tracker</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> <!-- Styles for the challenges app -->
-    <link rel="stylesheet" href="{% static 'css/main.css' %}"> <!-- Styles for the React app -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script src="{% static 'js/scripts.js' %}"></script>
 </head>
 <body>
     <header>
@@ -21,9 +21,6 @@
     </header>
     
     <main>
-        <!-- React App Placeholder -->
-        <div id="root"></div>  <!-- This is where your React app will be rendered -->
-
         <section class="hero">
             <div class="hero-content">
                 <h2 class="hero-title">Improve Your Coding Skills</h2>
@@ -76,6 +73,6 @@
         <p>&copy; 2024 Coding Challenge Tracker. All Rights Reserved.</p>
     </footer>
 
-    <script src="{% static 'js/main.js' %}"></script> <!-- JS for the React app -->
+    <script src="{% static 'js/scripts.js' %}"></script>
 </body>
 </html>
